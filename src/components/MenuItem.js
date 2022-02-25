@@ -2,6 +2,7 @@ import React from "react";
 import Grid from "@material-ui/core/Grid";
 import { makeStyles } from "@material-ui/core";
 import { Card, CardActionArea, CardMedia, CardContent, Typography } from "@material-ui/core";
+import PropTypes from "prop-types";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -46,6 +47,11 @@ const MenuItem = (props) => {
       </Card>
     </Grid>
   );
+}
+
+MenuItem.propTypes = {
+  title: PropTypes.string,
+  id: PropTypes.number
 }
 
 export default MenuItem;

@@ -5,6 +5,7 @@ import "../index.css";
 import MenuItem from "./MenuItem";
 import { makeStyles } from "@material-ui/core";
 import { Typography } from "@material-ui/core";
+import PropTypes from "prop-types";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -28,7 +29,6 @@ const Menu = (props) => {
         <Grid container spacing={2}>
           {
             props.items.map((movie, index) => {
-              console.log(movie);
               return <MenuItem key={movie.id} id={movie.id} title={movie.title} />
             })
           }
@@ -36,6 +36,10 @@ const Menu = (props) => {
       </Container>
     </Fragment>
   );
+}
+
+Menu.propTypes = {
+  items: PropTypes.array
 }
 
 export default Menu;

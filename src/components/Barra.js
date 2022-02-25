@@ -3,6 +3,7 @@ import React from "react";
 import { Search as SearchIcon } from "@material-ui/icons";
 import { InputBase } from "@material-ui/core";
 import { alpha, makeStyles } from "@material-ui/core";
+import PropTypes from "prop-types";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -81,6 +82,10 @@ const Barra = (props) => {
       </AppBar>
     </div>
   );
+}
+
+Barra.propTypes = {
+  handleChange: PropTypes.func
 }
 
 export default Barra;
